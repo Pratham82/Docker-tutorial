@@ -19,14 +19,12 @@ CMD [ "node", "-e" , "console.log(\"Hello from Docker\")"  ]
 ```docker
 docker build --tag<Image Name>:<Image version> <source for Dockerfile>
 
-
 ```
 
 Here we are building a **docker image** named **node-img** which will source its **Dockerfile** from the current directory, because of the **"."** at the end.
 
 ```docker
 docker build --tag node-img:1 .
-
 ```
 
 Example output:
