@@ -4,7 +4,7 @@
 
 2. Running the container with port forwarding
 
-The following command will run docker container named **node-app-container** created from **node-app** image which will be published on PORT 3000
+The following command will run docker container named **node-app-container** created from **node-app** image which will be published on PORT 3000. -d will run it in detached mode.
 
 ```
 docker run --init --rm --publish -d 3000:3000 --name node-app-container node-app
@@ -20,7 +20,7 @@ e08c5998cdfd   node-app          "docker-entrypoint.s…"   4 seconds ago   Up 4
 
 Another way to run the same container:
 
-The following command will run docker container named **node-app-container** created from **node-app** image. The difference is that we are using **-P** instead of --publish or -p, -P means Publish all exposed ports to random ports. So when we run the container our application will be served on random ports everytime. We can check the current container PORT is different.
+The following command will run docker container named **node-app-container** created from **node-app** image. -d will run the container in detached mode. The difference is that we are using **-P** instead of --publish or -p, -P means Publish all exposed ports to random ports. So when we run the container our application will be served on random ports everytime. We can check the current container PORT is different.
 
 ```
 docker run --init --rm --publish -d -P --name node-app-container node-app
