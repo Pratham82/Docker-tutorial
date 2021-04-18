@@ -1,0 +1,18 @@
+{
+  "name": "Node app testing",
+  "dockerFile": "Dockerfile",
+  "appPort": [3000],
+  "runArgs": ["-u", "node"],
+  "settings": {
+    // "workbench.colorTheme": "Hot Dog Stand",
+    "workbench.colorTheme": "One Dark Pro",
+    "terminal.integrated.shellArgs.linux": "/bin/bash"
+  },
+  "postCreateCommand": "npm install",
+  "extensions": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "zhuangtongfa.material-theme"
+    // "somekittens.hot-dog-stand"
+  ]
+}
